@@ -1,0 +1,818 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_light"
+            style="@style/style_main_tv_2"
+            android:layout_centerVertical="true"
+            android:text="@string/tv_light" />
+
+        <com.lu.face.faceenginedemo.engine.view.SwitchButton
+            android:id="@+id/sbtn_light"
+            style="@style/style_switch_button"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="110dp"
+            app:frameDrawable="@drawable/switch_frame_selector"
+            app:sliderDrawable="@drawable/switch_slider_selector"
+            app:stateDrawable="@drawable/switch_state_selector"
+            app:stateMaskDrawable="@drawable/switch_state_musk" />
+
+        <TextView
+            android:id="@+id/tv_light_switch"
+            style="@style/style_main_tv_2"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="110dp"
+            android:layout_toRightOf="@id/sbtn_light"
+            android:text="@string/tv_light_switch" />
+
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@id/tv_light_switch"
+            android:max="100"
+            android:maxHeight="3dp"
+            android:minHeight="3dp"
+            android:paddingLeft="20dp"
+            android:progressDrawable="@drawable/seekbar_bg_layer"
+            android:thumb="@drawable/seekbar_thumb" />
+
+        <TextView
+            android:id="@+id/tv_dark"
+            style="@style/style_main_tv_2"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/seekbar"
+            android:text="@string/tv_dark" />
+
+        <TextView
+            android:id="@+id/tv_bright"
+            style="@style/style_main_tv_2"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/seekbar"
+            android:text="@string/tv_bright" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_line_2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/rl_light"
+        android:background="#33ffffff" />
+
+    <RelativeLayout
+        android:id="@+id/rl_attribute"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_line_2"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:id="@+id/tv_attribute"
+            style="@style/style_main_tv_2"
+            android:layout_marginTop="15dp"
+            android:text="@string/tv_attribute" />
+
+        <RelativeLayout
+            android:id="@+id/rl_attribute_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="110dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_attribute_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.lu.face.faceenginedemo.engine.view.SwitchButton
+                    android:id="@+id/sbtn_face_frame"
+                    style="@style/style_switch_button"
+                    android:layout_centerVertical="true"
+                    app:frameDrawable="@drawable/switch_frame_selector"
+                    app:sliderDrawable="@drawable/switch_slider_selector"
+                    app:stateDrawable="@drawable/switch_state_selector"
+                    app:stateMaskDrawable="@drawable/switch_state_musk" />
+
+                <TextView
+                    android:id="@+id/tv_face_frame"
+                    style="@style/style_main_tv_2"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/sbtn_face_frame"
+                    android:text="@string/tv_face_frame" />
+
+                <com.lu.face.faceenginedemo.engine.view.SwitchButton
+                    android:id="@+id/sbtn_face_feature"
+                    style="@style/style_switch_button"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="120dp"
+                    android:layout_toRightOf="@id/sbtn_face_frame"
+                    app:frameDrawable="@drawable/switch_frame_selector"
+                    app:sliderDrawable="@drawable/switch_slider_selector"
+                    app:stateDrawable="@drawable/switch_state_selector"
+                    app:stateMaskDrawable="@drawable/switch_state_musk" />
+
+                <TextView
+                    android:id="@+id/tv_face_feature"
+                    style="@style/style_main_tv_2"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/sbtn_face_feature"
+                    android:text="@string/tv_face_feature" />
+
+                <com.lu.face.faceenginedemo.engine.view.SwitchButton
+                    android:id="@+id/sbtn_face_attribute"
+                    style="@style/style_switch_button"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="120dp"
+                    android:layout_toRightOf="@id/sbtn_face_feature"
+                    app:frameDrawable="@drawable/switch_frame_selector"
+                    app:sliderDrawable="@drawable/switch_slider_selector"
+                    app:stateDrawable="@drawable/switch_state_selector"
+                    app:stateMaskDrawable="@drawable/switch_state_musk" />
+
+                <TextView
+                    android:id="@+id/tv_face_attibute"
+                    style="@style/style_main_tv_2"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/sbtn_face_attribute"
+                    android:text="@string/tv_face_attibute" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_attribute_top"
+                android:layout_marginTop="5dp">
+
+                <com.lu.face.faceenginedemo.engine.view.SwitchButton
+                    android:id="@+id/sbtn_total_time"
+                    style="@style/style_switch_button"
+                    android:layout_centerVertical="true"
+                    app:frameDrawable="@drawable/switch_frame_selector"
+                    app:sliderDrawable="@drawable/switch_slider_selector"
+                    app:stateDrawable="@drawable/switch_state_selector"
+                    app:stateMaskDrawable="@drawable/switch_state_musk" />
+
+                <TextView
+                    android:id="@+id/tv_total_time"
+                    style="@style/style_main_tv_2"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/sbtn_total_time"
+                    android:text="@string/tv_total_time" />
+
+                <com.lu.face.faceenginedemo.engine.view.SwitchButton
+                    android:id="@+id/sbtn_detail_time"
+                    style="@style/style_switch_button"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="120dp"
+                    android:layout_toRightOf="@id/sbtn_total_time"
+                    app:frameDrawable="@drawable/switch_frame_selector"
+                    app:sliderDrawable="@drawable/switch_slider_selector"
+                    app:stateDrawable="@drawable/switch_state_selector"
+                    app:stateMaskDrawable="@drawable/switch_state_musk" />
+
+                <TextView
+                    android:id="@+id/tv_detail_time"
+                    style="@style/style_main_tv_2"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/sbtn_detail_time"
+                    android:text="@string/tv_detail_time" />
+
+                <com.lu.face.faceenginedemo.engine.view.SwitchButton
+                    android:id="@+id/sbtn_auto_add"
+                    style="@style/style_switch_button"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="120dp"
+                    android:layout_toRightOf="@id/sbtn_detail_time"
+                    app:frameDrawable="@drawable/switch_frame_selector"
+                    app:sliderDrawable="@drawable/switch_slider_selector"
+                    app:stateDrawable="@drawable/switch_state_selector"
+                    app:stateMaskDrawable="@drawable/switch_state_musk" />
+
+                <TextView
+                    android:id="@+id/tv_auto_add"
+                    style="@style/style_main_tv_2"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/sbtn_auto_add"
+                    android:text="@string/tv_auto_add" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_line_3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/rl_attribute"
+        android:background="#33ffffff" />
+
+    <RelativeLayout
+        android:id="@+id/rl_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_line_3"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:id="@+id/tv_mode"
+            style="@style/style_main_tv_2"
+            android:layout_marginTop="10dp"
+            android:text="@string/tv_mode" />
+
+        <com.lu.face.faceenginedemo.engine.view.SwitchButton
+            android:id="@+id/sbtn_face_verify"
+            style="@style/style_switch_button"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="10dp"
+            app:frameDrawable="@drawable/switch_frame_selector"
+            app:sliderDrawable="@drawable/switch_slider_selector"
+            app:stateDrawable="@drawable/switch_state_selector"
+            app:stateMaskDrawable="@drawable/switch_state_musk" />
+
+        <LinearLayout
+            android:id="@+id/ll_face"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/sbtn_face_verify"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_mode_face"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/system_camera_bg">
+
+                    <ImageView
+                        android:id="@+id/iv_mode_face"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/system_camera_iv" />
+
+                    <TextView
+                        android:id="@+id/tv_mode_face"
+                        style="@style/style_main_tv_2"
+                        android:layout_width="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toLeftOf="@id/iv_mode_face" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_face_verify"
+                    style="@style/style_main_tv_2"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/rl_mode_face"
+                    android:text="@string/tv_face_verify" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/et_front_filter"
+                    style="@style/style_main_tv_2"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/system_camera_bg"
+                    android:maxLength="13"
+                    android:numeric="integer"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/tv_front_filter"
+                    style="@style/style_main_tv_2"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/et_front_filter"
+                    android:text="@string/tv_front_filter" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/et_back_filter"
+                    style="@style/style_main_tv_2"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/system_camera_bg"
+                    android:maxLength="13"
+                    android:numeric="integer"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/tv_back_filter"
+                    style="@style/style_main_tv_2"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/et_back_filter"
+                    android:text="@string/tv_back_filter" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/et_verify_timeout"
+                    style="@style/style_main_tv_2"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/system_camera_bg"
+                    android:hint="@string/et_verify_timeout"
+                    android:maxLength="13"
+                    android:numeric="integer"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/tv_verify_timeout"
+                    style="@style/style_main_tv_2"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/et_verify_timeout"
+                    android:text="@string/tv_verify_timeout" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/et_min_face"
+                    style="@style/style_main_tv_2"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/system_camera_bg"
+                    android:hint="@string/et_min_face"
+                    android:maxLength="13"
+                    android:numeric="integer"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/tv_min_face"
+                    style="@style/style_main_tv_2"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/et_min_face"
+                    android:text="@string/tv_min_face" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <com.lu.face.faceenginedemo.engine.view.SwitchButton
+            android:id="@+id/sbtn_finger_verify"
+            style="@style/style_switch_button"
+            android:layout_marginLeft="306dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/sbtn_face_verify"
+            app:frameDrawable="@drawable/switch_frame_selector"
+            app:sliderDrawable="@drawable/switch_slider_selector"
+            app:stateDrawable="@drawable/switch_state_selector"
+            app:stateMaskDrawable="@drawable/switch_state_musk" />
+
+        <LinearLayout
+            android:id="@+id/ll_finger"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/sbtn_finger_verify"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_mode_finger"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/system_camera_bg">
+
+                    <ImageView
+                        android:id="@+id/iv_mode_finger"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/system_camera_iv" />
+
+                    <TextView
+                        android:id="@+id/tv_mode_finger"
+                        style="@style/style_main_tv_2"
+                        android:layout_width="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toLeftOf="@id/iv_mode_finger" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_finger_verify"
+                    style="@style/style_main_tv_2"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/rl_mode_finger"
+                    android:text="@string/tv_finger_verify" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/et_finger_threshold"
+                    style="@style/style_main_tv_2"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/system_camera_bg"
+                    android:hint="@string/et_finger_threshold"
+                    android:maxLength="13"
+                    android:numeric="integer"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/tv_finger_threshold"
+                    style="@style/style_main_tv_2"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/et_finger_threshold"
+                    android:text="@string/tv_finger_threshold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/et_finger_quality"
+                    style="@style/style_main_tv_2"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/system_camera_bg"
+                    android:hint="@string/et_finger_quality"
+                    android:maxLength="13"
+                    android:numeric="integer"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/tv_finger_quality"
+                    style="@style/style_main_tv_2"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/et_finger_quality"
+                    android:text="@string/tv_finger_quality" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_line_4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/rl_mode"
+        android:background="#33ffffff" />
+
+    <RelativeLayout
+        android:id="@+id/rl_channel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_line_4"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:id="@+id/tv_face_channel_set"
+            style="@style/style_main_tv_2"
+            android:layout_marginTop="10dp"
+            android:text="@string/tv_face_channel_set" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <RelativeLayout
+                android:id="@+id/rl_channel_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="110dp"
+                android:gravity="center_vertical">
+
+                <com.lu.face.faceenginedemo.engine.view.SwitchButton
+                    android:id="@+id/sbtn_channel_0"
+                    style="@style/style_switch_button"
+                    android:layout_centerVertical="true"
+                    app:frameDrawable="@drawable/switch_frame_selector"
+                    app:sliderDrawable="@drawable/switch_slider_selector"
+                    app:stateDrawable="@drawable/switch_state_selector"
+                    app:stateMaskDrawable="@drawable/switch_state_musk" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_ch0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/sbtn_channel_0"
+                    android:gravity="center_vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_channel0_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/system_camera_bg">
+
+                        <ImageView
+                            android:id="@+id/iv_channel_0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/system_camera_iv" />
+
+                        <TextView
+                            android:id="@+id/tv_channel_0"
+                            style="@style/style_main_tv_2"
+                            android:layout_width="match_parent"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toLeftOf="@id/iv_channel_0" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_face_channel_0"
+                        style="@style/style_main_tv_2"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/rl_channel0_iv"
+                        android:text="@string/tv_face_channel_0" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_top_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/rl_ch0"
+                    android:gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/et_top_threshold_0"
+                        style="@style/style_main_tv_2"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/system_camera_bg"
+                        android:hint="@string/et_top_threshold_0"
+                        android:maxLength="13"
+                        android:numeric="decimal"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true" />
+
+                    <TextView
+                        android:id="@+id/tv_top_threshold_0"
+                        style="@style/style_main_tv_2"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/et_top_threshold_0"
+                        android:text="@string/tv_top_threshold_0" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_bottom_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/rl_top_0"
+                    android:gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/et_bottom_threshold_0"
+                        style="@style/style_main_tv_2"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/system_camera_bg"
+                        android:hint="@string/et_bottom_threshold_0"
+                        android:maxLength="13"
+                        android:numeric="decimal"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true" />
+
+                    <TextView
+                        android:id="@+id/tv_bottom_threshold_0"
+                        style="@style/style_main_tv_2"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/et_bottom_threshold_0"
+                        android:text="@string/tv_bottom_threshold_0" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_n_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/rl_bottom_0"
+                    android:gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/et_n_threshold_0"
+                        style="@style/style_main_tv_2"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/system_camera_bg"
+                        android:hint="@string/et_n_threshold_0"
+                        android:maxLength="13"
+                        android:numeric="decimal"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true" />
+
+                    <TextView
+                        android:id="@+id/tv_n_threshold_0"
+                        style="@style/style_main_tv_2"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/et_n_threshold_0"
+                        android:text="@string/tv_n_threshold_0" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_channel_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_channel_0"
+                android:layout_marginLeft="110dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical">
+
+                <com.lu.face.faceenginedemo.engine.view.SwitchButton
+                    android:id="@+id/sbtn_channel_1"
+                    style="@style/style_switch_button"
+                    android:layout_centerVertical="true"
+                    app:frameDrawable="@drawable/switch_frame_selector"
+                    app:sliderDrawable="@drawable/switch_slider_selector"
+                    app:stateDrawable="@drawable/switch_state_selector"
+                    app:stateMaskDrawable="@drawable/switch_state_musk" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_ch1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/sbtn_channel_1"
+                    android:gravity="center_vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_channel1_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/system_camera_bg">
+
+                        <ImageView
+                            android:id="@+id/iv_channel_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/system_camera_iv" />
+
+                        <TextView
+                            android:id="@+id/tv_channel_1"
+                            style="@style/style_main_tv_2"
+                            android:layout_width="match_parent"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toLeftOf="@id/iv_channel_1" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_face_channel_1"
+                        style="@style/style_main_tv_2"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/rl_channel1_iv"
+                        android:text="@string/tv_face_channel_1" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_top_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/rl_ch1"
+                    android:gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/et_top_threshold_1"
+                        style="@style/style_main_tv_2"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/system_camera_bg"
+                        android:hint="@string/et_top_threshold_1"
+                        android:maxLength="13"
+                        android:numeric="decimal"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true" />
+
+                    <TextView
+                        android:id="@+id/tv_top_threshold_1"
+                        style="@style/style_main_tv_2"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/et_top_threshold_1"
+                        android:text="@string/tv_top_threshold_1" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_bottom_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/rl_top_1"
+                    android:gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/et_bottom_threshold_1"
+                        style="@style/style_main_tv_2"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/system_camera_bg"
+                        android:hint="@string/et_bottom_threshold_1"
+                        android:maxLength="13"
+                        android:numeric="decimal"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true" />
+
+                    <TextView
+                        android:id="@+id/tv_bottom_threshold_1"
+                        style="@style/style_main_tv_2"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/et_bottom_threshold_1"
+                        android:text="@string/tv_bottom_threshold_1" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_n_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/rl_bottom_1"
+                    android:gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/et_n_threshold_1"
+                        style="@style/style_main_tv_2"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/system_camera_bg"
+                        android:hint="@string/et_n_threshold_1"
+                        android:maxLength="13"
+                        android:numeric="decimal"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true" />
+
+                    <TextView
+                        android:id="@+id/tv_n_threshold_1"
+                        style="@style/style_main_tv_2"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/et_n_threshold_1"
+                        android:text="@string/tv_n_threshold_1" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

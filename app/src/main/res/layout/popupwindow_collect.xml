@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mai_pop_bg"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tv_collect_title"
+        style="@style/style_main_tv_2"
+        android:layout_centerHorizontal="true"
+        android:text="@string/tv_collect_title" />
+
+    <ImageView
+        android:id="@+id/iv_fp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_collect_title"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/main_iv_bg" />
+
+    <TextView
+        android:id="@+id/tv_fp_score"
+        style="@style/style_main_tv_2"
+        android:layout_below="@id/iv_fp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/tv_fp_score" />
+
+    <TextView
+        android:id="@+id/tv_fp_name"
+        style="@style/style_main_tv_2"
+        android:layout_below="@id/tv_fp_score"
+        android:layout_centerHorizontal="true"
+        android:text="@string/tv_fp_name" />
+
+    <TextView
+        android:id="@+id/tv_fp_fail"
+        style="@style/style_main_tv_2"
+        android:layout_below="@id/tv_fp_score"
+        android:layout_centerHorizontal="true"
+        android:text="@string/tv_fp_fail" />
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_ok"
+            style="@style/style_main_tv_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/system_btn_bg"
+            android:padding="10dp"
+            android:text="@string/btn_ok_collect" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            style="@style/style_main_tv_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/system_btn_bg"
+            android:padding="10dp"
+            android:text="@string/btn_cancel" />
+    </LinearLayout>
+</RelativeLayout>

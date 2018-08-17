@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_lib_query"
+            style="@style/style_main_tv_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/system_btn_bg"
+            android:text="@string/btn_lib_query" />
+
+        <EditText
+            android:id="@+id/et_query"
+            style="@style/style_main_tv_2"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@id/btn_lib_query"
+            android:background="@drawable/system_camera_bg"
+            android:maxLength="25"
+            android:paddingLeft="10dp"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/btn_lib_add"
+            style="@style/style_main_tv_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/et_query"
+            android:background="@drawable/system_btn_bg"
+            android:text="@string/btn_lib_add" />
+
+        <TextView
+            android:id="@+id/tv_libs"
+            style="@style/style_main_tv_2"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/btn_lib_add" />
+
+        <TextView
+            android:id="@+id/tv_format"
+            style="@style/style_main_tv_2"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/tv_format"
+            android:textColor="#ffff0000" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_lib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_top"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/system_camera_bg"
+        android:divider="@null" />
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mai_pop_bg"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tv_title_dialog"
+        style="@style/style_main_tv_2"
+        android:layout_centerHorizontal="true"
+        android:text="@string/tv_title_dialog" />
+
+    <ImageView
+        android:id="@+id/iv_face_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title_dialog"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:id="@+id/rl_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_face_dialog"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/tv_name_dialog"
+            style="@style/style_main_tv_2"
+            android:layout_centerVertical="true"
+            android:text="@string/tv_name_dialog" />
+
+        <TextView
+            android:id="@+id/et_name_dialog"
+            style="@style/style_main_tv_2"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv_name_dialog"
+            android:background="@drawable/system_camera_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:singleLine="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_btn_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_dialog"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_ok"
+            style="@style/style_main_tv_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/system_btn_bg"
+            android:padding="10dp"
+            android:text="@string/btn_ok" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            style="@style/style_main_tv_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/system_btn_bg"
+            android:padding="10dp"
+            android:text="@string/btn_cancel" />
+    </LinearLayout>
+</RelativeLayout>

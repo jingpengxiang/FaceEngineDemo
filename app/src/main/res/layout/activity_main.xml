@@ -1,0 +1,346 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg">
+
+    <RelativeLayout
+        android:id="@+id/rl_root"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/rl_finger_face"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/main_rl_bg"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/rl_finger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/rl_finger_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.1">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/iv_finger"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/main_iv_bg" />
+
+                        <ImageView
+                            android:id="@+id/iv_finger_musk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/main_iv_musk" />
+
+                        <TextView
+                            android:id="@+id/tv_finger"
+                            style="@style/style_main_tv_1"
+                            android:text="@string/tv_finger" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_finger_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/main_iv_finger" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_finger_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="16">
+
+                    <TextView
+                        android:id="@+id/tv_finger_threshold"
+                        style="@style/style_main_tv_2"
+                        android:text="@string/tv_finger_threshold" />
+
+                    <TextView
+                        android:id="@+id/tv_finger_value"
+                        style="@style/style_main_tv_2"
+                        android:layout_below="@id/tv_finger_threshold"
+                        android:text="@string/tv_finger_value" />
+
+                    <TextView
+                        android:id="@+id/tv_finger_result"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#b31e01"
+                        android:textSize="32sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rl_face"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/rl_face_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.1">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/iv_face"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/main_iv_bg"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:id="@+id/tv_face"
+                            style="@style/style_main_tv_1"
+                            android:text="@string/tv_face" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_face_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/main_iv_face" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_face_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="16">
+
+                    <TextView
+                        android:id="@+id/tv_face_threshold"
+                        style="@style/style_main_tv_2"
+                        android:text="@string/tv_face_threshold" />
+
+                    <TextView
+                        android:id="@+id/tv_face_value"
+                        style="@style/style_main_tv_2"
+                        android:layout_below="@id/tv_face_threshold"
+                        android:text="@string/tv_face_value" />
+
+                    <TextView
+                        android:id="@+id/tv_face_result"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#29db00"
+                        android:textSize="32sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_preview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/rl_finger_face"
+            android:background="@drawable/main_rl_bg">
+            <!-- <SurfaceView android:id="@+id/sfv_preview" android:layout_width="wrap_content" android:layout_height="wrap_content" /> -->
+            <SurfaceView
+                android:id="@+id/sfv_rect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/rl_finger_face"
+            android:layout_alignTop="@id/rl_preview"
+            android:layout_toRightOf="@id/rl_finger_face"
+            android:background="@drawable/main_rl_bg">
+
+            <RelativeLayout
+                android:id="@+id/rl_card_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/main_iv_bg"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/iv_card_musk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/main_iv_musk" />
+
+                    <TextView
+                        android:id="@+id/tv_card"
+                        style="@style/style_main_tv_1"
+                        android:text="@string/tv_card" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/iv_card_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/main_iv_card" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_card_name"
+                style="@style/style_main_tv_2"
+                android:layout_below="@id/rl_card_iv"
+                android:layout_marginTop="15dp"
+                android:text="@string/tv_card_name" />
+
+            <TextView
+                android:id="@+id/tv_card_sex"
+                style="@style/style_main_tv_2"
+                android:layout_below="@id/tv_card_name"
+                android:text="@string/tv_card_sex" />
+
+            <TextView
+                android:id="@+id/tv_card_nation"
+                style="@style/style_main_tv_2"
+                android:layout_below="@id/tv_card_sex"
+                android:text="@string/tv_card_nation" />
+
+            <TextView
+                android:id="@+id/tv_card_birthday"
+                style="@style/style_main_tv_2"
+                android:layout_below="@id/tv_card_nation"
+                android:text="@string/tv_card_birthday"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_card_id"
+                style="@style/style_main_tv_2"
+                android:layout_below="@id/tv_card_birthday"
+                android:text="@string/tv_card_id" />
+
+            <TextView
+                android:id="@+id/tv_fp"
+                style="@style/style_main_tv_2"
+                android:layout_below="@id/tv_card_id"
+                android:text="@string/tv_fp" />
+
+            <TextView
+                android:id="@+id/tv_detect_total"
+                style="@style/style_main_tv_2"
+                android:layout_below="@id/tv_fp"
+                android:layout_marginTop="30dp"
+                android:text="@string/tv_detect_total" />
+
+            <TextView
+                android:id="@+id/tv_detect"
+                style="@style/style_main_tv_2"
+                android:layout_below="@id/tv_detect_total"
+                android:text="@string/tv_detect" />
+
+            <TextView
+                android:id="@+id/tv_card_read"
+                style="@style/style_main_tv_2"
+                android:layout_below="@id/tv_detect"
+                android:text="@string/tv_card_read" />
+
+            <TextView
+                android:id="@+id/tv_feature"
+                style="@style/style_main_tv_2"
+                android:layout_below="@id/tv_card_read"
+                android:text="@string/tv_feature" />
+
+            <TextView
+                android:id="@+id/tv_version"
+                style="@style/style_main_tv_3"
+                android:layout_alignParentBottom="true"
+                android:text="@string/tv_version" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="35dp"
+        android:background="@drawable/main_rl_bg"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/btn_orientation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:padding="20dp"
+            android:src="@drawable/main_orientation_selector" />
+
+        <ImageButton
+            android:id="@+id/btn_frame_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_orientation"
+            android:background="@android:color/transparent"
+            android:padding="20dp"
+            android:src="@drawable/main_frame_switch_selector" />
+
+        <ImageButton
+            android:id="@+id/btn_camera_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_frame_switch"
+            android:background="@android:color/transparent"
+            android:padding="20dp"
+            android:src="@drawable/main_camera_switch_selector" />
+
+        <ImageButton
+            android:id="@+id/btn_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_camera_switch"
+            android:background="@android:color/transparent"
+            android:padding="20dp"
+            android:src="@drawable/main_set_selector" />
+    </RelativeLayout>
+</RelativeLayout>

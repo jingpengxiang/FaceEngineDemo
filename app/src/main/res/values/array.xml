@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<array name="array_camera">
+		<item>@string/camera_back</item>
+		<item>@string/camera_front</item>
+	</array>
+	<array name="array_camera_back">
+		<item>@string/camera_back</item>
+	</array>
+	<array name="array_camera_front">
+		<item>@string/camera_front</item>
+	</array>
+	<array name="array_verify_type">
+		<item>1:1</item>
+		<item>1:n</item>
+		<!--<item>全模式</item>-->
+	</array>
+</resources>

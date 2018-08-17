@@ -1,0 +1,32 @@
+<resources>
+	<style name="style_main_tv_1">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_centerInParent">true</item>
+		<item name="android:textSize">14sp</item>
+		<item name="android:textColor">@android:color/white</item>
+	</style>
+	<style name="style_main_tv_2">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textSize">14sp</item>
+		<item name="android:textColor">#b3ffffff</item>
+	</style>
+	<style name="style_main_tv_3">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textSize">14sp</item>
+		<item name="android:textColor">#4dffffff</item>
+	</style>
+	<style name="style_switch_button">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:paddingLeft">0dp</item>
+		<item name="android:paddingTop">0dp</item>
+		<item name="android:paddingRight">20dp</item>
+		<item name="android:paddingBottom">0dp</item>
+		<item name="android:minHeight">30dp</item>
+		<item name="android:drawablePadding">0dp</item>
+		<item name="android:textColor">@android:color/black</item>
+	</style>
+</resources>

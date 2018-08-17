@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0270ab"
+    android:padding="20dp">
+
+    <com.lu.face.faceenginedemo.engine.view.PagerSlidingTabStrip
+        android:id="@+id/sliding_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/configure_tab_bg" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/sliding_tab"
+        android:background="@drawable/configure_vp_bg" />
+    <!--  <RelativeLayout android:id="@+id/rl_root" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_centerInParent="true" android:background="#33ffffff" android:layout_margin="10dp">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true"
+            android:background="@drawable/configure_bg" android:layout_margin="1dp" >
+
+        </RelativeLayout>
+    </RelativeLayout>-->
+</RelativeLayout>
